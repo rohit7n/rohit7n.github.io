@@ -107,58 +107,131 @@
       </div>
     </section>
 
-<!-- =========================================================
-     DIGITAL SHOWROOM — PORTFOLIO REDIRECT
-     Add this to your portfolio website
-     ========================================================= -->
+<!-- DIGITAL SHOWROOM — SMALL CARD -->
+
+<div class="ds-mini-card">
+  <div class="ds-mini-info">
+    <span class="ds-mini-label">DIGITAL SHOWROOM</span>
+    <h3>Explore my digital work</h3>
+    <p>Research reports · Publications · Digital services</p>
+  </div>
+
+  <a
+    href="https://rohit7n.github.io/Digital-Showroom/"
+    class="ds-mini-button"
+  >
+    Explore <span>→</span>
+  </a>
+</div>
 
 <style>
-  .digital-showroom-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 22px;
-    border: 1px solid rgba(77, 156, 255, 0.35);
-    border-radius: 9px;
-    background: rgba(77, 156, 255, 0.08);
-    color: #75b1ff;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s ease;
+.ds-mini-card {
+  width: min(620px, calc(100% - 32px));
+  margin: 35px auto;
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: rgba(13, 18, 26, 0.9);
+  border: 1px solid rgba(77, 156, 255, 0.18);
+  border-radius: 14px;
+
+  box-sizing: border-box;
+  transition: 0.25s ease;
+}
+
+.ds-mini-card:hover {
+  border-color: rgba(77, 156, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.ds-mini-info {
+  min-width: 0;
+}
+
+.ds-mini-label {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #75b1ff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.ds-mini-info h3 {
+  margin: 0;
+  color: #edf2f8;
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.ds-mini-info p {
+  margin: 5px 0 0;
+  color: #788496;
+  font-size: 11px;
+}
+
+.ds-mini-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border: 1px solid rgba(77, 156, 255, 0.3);
+  border-radius: 8px;
+
+  background: rgba(77, 156, 255, 0.08);
+  color: #75b1ff;
+
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.ds-mini-button:hover {
+  background: #4d9cff;
+  border-color: #4d9cff;
+  color: #fff;
+}
+
+.ds-mini-button span {
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.ds-mini-button:hover span {
+  transform: translateX(3px);
+}
+
+@media (max-width: 520px) {
+  .ds-mini-card {
+    padding: 16px;
+    gap: 12px;
   }
 
-  .digital-showroom-link:hover {
-    background: #4d9cff;
-    border-color: #4d9cff;
-    color: #ffffff;
-    transform: translateY(-1px);
+  .ds-mini-info h3 {
+    font-size: 15px;
   }
 
-  .digital-showroom-link:focus-visible {
-    outline: 2px solid #75b1ff;
-    outline-offset: 4px;
+  .ds-mini-info p {
+    font-size: 10px;
   }
 
-  @media (max-width: 600px) {
-    .digital-showroom-link {
-      width: 100%;
-    }
+  .ds-mini-button {
+    padding: 8px 10px;
   }
+}
 </style>
-
-<a
-  href="https://rohit7n.github.io/Digital-Showroom/"
-  class="digital-showroom-link"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Visit Digital Showroom
-</a>
-
-<!-- =========================================================
-     END — DIGITAL SHOWROOM REDIRECT
-     ========================================================= -->
     
     <section class="section container" id="about">
       <div class="section-head reveal">
