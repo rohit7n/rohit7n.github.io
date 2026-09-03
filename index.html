@@ -474,6 +474,512 @@
 <!-- =========================================================
      END — DIGITAL SHOWROOM
      ========================================================= -->
+
+  <!-- START: Students' Guidance Professional Card -->
+
+<section class="sg-profession-card" aria-label="Students' Guidance">
+
+    <div class="sg-card-glow"></div>
+
+    <div class="sg-card-content">
+
+        <!-- Top -->
+        <div class="sg-card-top">
+            <span class="sg-label">EDUCATIONAL GUIDANCE</span>
+
+            <span class="sg-status">
+                <i></i>
+                ACTIVE
+            </span>
+        </div>
+
+        <!-- Title -->
+        <h2>Students' Guidance</h2>
+
+        <p class="sg-description">
+            Simple, focused educational guidance for students
+            in <strong>Class 2 to Class 6</strong>.
+        </p>
+
+        <!-- Key Information -->
+        <div class="sg-details">
+
+            <div class="sg-detail">
+                <strong>₹499</strong>
+                <span>Per Session</span>
+            </div>
+
+            <div class="sg-detail">
+                <strong>45 Min</strong>
+                <span>Online Session</span>
+            </div>
+
+            <div class="sg-detail">
+                <strong>Sunday</strong>
+                <span>Appointments</span>
+            </div>
+
+        </div>
+
+        <!-- Guidance Areas -->
+        <div class="sg-areas">
+            <span>English</span>
+            <span>Science</span>
+            <span>Study Related</span>
+        </div>
+
+        <!-- Bottom -->
+        <div class="sg-card-footer">
+
+            <span class="sg-independent">
+                Independent Service
+            </span>
+
+            <a
+                href="https://rohit7n.github.io/students-guidance/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sg-explore"
+            >
+                Explore Service
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   START — STUDENTS' GUIDANCE PROFESSIONAL CARD
+   Self-contained CSS
+========================================================= */
+
+.sg-profession-card {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(37, 99, 235, 0.24),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #080f1d 0%,
+            #101a30 55%,
+            #0b1425 100%
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    isolation: isolate;
+}
+
+
+/* Ambient glow */
+
+.sg-card-glow {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -140px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(59, 130, 246, 0.25);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* Main content */
+
+.sg-card-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 38px;
+}
+
+
+/* Top row */
+
+.sg-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+/* Category */
+
+.sg-label {
+    color: #7dd3fc;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* Status */
+
+.sg-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 11px;
+
+    border: 1px solid rgba(74, 222, 128, 0.25);
+    border-radius: 999px;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    color: #86efac;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* Status indicator */
+
+.sg-status i {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #4ade80;
+
+    box-shadow: 0 0 12px #4ade80;
+}
+
+
+/* Main heading */
+
+.sg-profession-card h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: clamp(2.2rem, 6vw, 4rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 850;
+}
+
+
+/* Description */
+
+.sg-description {
+    max-width: 620px;
+
+    margin: 20px 0 32px;
+
+    color: #b9c5d8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.sg-description strong {
+    color: #ffffff;
+}
+
+
+/* Information grid */
+
+.sg-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Information boxes */
+
+.sg-detail {
+    padding: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 17px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.sg-detail:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border-color:
+        rgba(96, 165, 250, 0.25);
+}
+
+
+/* Information value */
+
+.sg-detail strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* Information label */
+
+.sg-detail span {
+    color: #8290a7;
+
+    font-size: 12px;
+}
+
+
+/* Guidance areas */
+
+.sg-areas {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 32px;
+}
+
+
+.sg-areas span {
+    padding: 8px 13px;
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.20);
+
+    border-radius: 999px;
+
+    background:
+        rgba(37, 99, 235, 0.10);
+
+    color: #bfdbfe;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* Footer */
+
+.sg-card-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* Independent service */
+
+.sg-independent {
+    color: #718096;
+
+    font-size: 12px;
+}
+
+
+/* Explore button */
+
+.sg-explore {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.sg-explore:hover {
+    transform: translateY(-2px);
+
+    background: #dbeafe;
+
+    box-shadow:
+        0 10px 30px
+        rgba(59, 130, 246, 0.20);
+}
+
+
+.sg-explore span {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .sg-profession-card {
+        margin: 25px 12px;
+
+        border-radius: 22px;
+    }
+
+
+    .sg-card-content {
+        padding: 25px 20px;
+    }
+
+
+    .sg-card-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .sg-profession-card h2 {
+        font-size: 2.35rem;
+    }
+
+
+    .sg-description {
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .sg-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    .sg-card-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .sg-explore {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   END — STUDENTS' GUIDANCE PROFESSIONAL CARD
+========================================================= */
+
+</style>
+
+<!-- END: Students' Guidance Professional Card -->
     
     <section class="section container" id="about">
       <div class="section-head reveal">
