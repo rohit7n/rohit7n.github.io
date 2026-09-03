@@ -475,511 +475,350 @@
      END — DIGITAL SHOWROOM
      ========================================================= -->
 
-  <!-- START: Students' Guidance Professional Card -->
+<!-- START: Students' Guidance Card -->
 
-<section class="sg-profession-card" aria-label="Students' Guidance">
+<section class="sg-mini-card">
 
-    <div class="sg-card-glow"></div>
+    <div class="sg-mini-accent"></div>
 
-    <div class="sg-card-content">
-
-        <!-- Top -->
-        <div class="sg-card-top">
-            <span class="sg-label">EDUCATIONAL GUIDANCE</span>
-
-            <span class="sg-status">
-                <i></i>
-                ACTIVE
-            </span>
-        </div>
-
-        <!-- Title -->
-        <h2>Students' Guidance</h2>
-
-        <p class="sg-description">
-            Simple, focused educational guidance for students
-            in <strong>Class 2 to Class 6</strong>.
-        </p>
-
-        <!-- Key Information -->
-        <div class="sg-details">
-
-            <div class="sg-detail">
-                <strong>₹499</strong>
-                <span>Per Session</span>
-            </div>
-
-            <div class="sg-detail">
-                <strong>45 Min</strong>
-                <span>Online Session</span>
-            </div>
-
-            <div class="sg-detail">
-                <strong>Sunday</strong>
-                <span>Appointments</span>
-            </div>
-
-        </div>
-
-        <!-- Guidance Areas -->
-        <div class="sg-areas">
-            <span>English</span>
-            <span>Science</span>
-            <span>Study Related</span>
-        </div>
-
-        <!-- Bottom -->
-        <div class="sg-card-footer">
-
-            <span class="sg-independent">
-                Independent Service
-            </span>
-
-            <a
-                href="https://rohit7n.github.io/students-guidance/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="sg-explore"
-            >
-                Explore Service
-                <span>↗</span>
-            </a>
-
-        </div>
-
+    <div class="sg-mini-head">
+        <span class="sg-mini-kicker">EDUCATIONAL GUIDANCE</span>
+        <span class="sg-mini-dot"></span>
     </div>
+
+    <div class="sg-mini-main">
+        <div class="sg-mini-icon">✦</div>
+
+        <div>
+            <h2>Students' Guidance</h2>
+            <p>
+                Focused academic guidance for
+                <strong>Class 2–6</strong> students.
+            </p>
+        </div>
+    </div>
+
+    <div class="sg-mini-tags">
+        <span>English</span>
+        <span>Science</span>
+        <span>Study Related</span>
+    </div>
+
+    <div class="sg-mini-info">
+        <b>₹499</b>
+        <span>•</span>
+        <b>45 min</b>
+        <span>•</span>
+        <b>Sunday</b>
+    </div>
+
+    <a
+        href="https://rohit7n.github.io/students-guidance/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="sg-mini-button"
+    >
+        Explore Guidance <span>↗</span>
+    </a>
 
 </section>
 
 
 <style>
 
-/* =========================================================
-   START — STUDENTS' GUIDANCE PROFESSIONAL CARD
-   Self-contained CSS
-========================================================= */
+/* =====================================================
+   START — STUDENTS' GUIDANCE CARD
+===================================================== */
 
-.sg-profession-card {
+.sg-mini-card {
     position: relative;
     width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 560px;
+    margin: 30px auto;
+    padding: 25px;
 
     overflow: hidden;
 
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    border-radius: 28px;
+    border: 1px solid #dfe7f2;
+    border-radius: 22px;
 
     background:
-        radial-gradient(
-            circle at 85% 15%,
-            rgba(37, 99, 235, 0.24),
-            transparent 34%
-        ),
-        linear-gradient(
-            135deg,
-            #080f1d 0%,
-            #101a30 55%,
-            #0b1425 100%
-        );
+        linear-gradient(145deg, #ffffff 0%, #f7faff 100%);
 
-    color: #ffffff;
+    color: #142033;
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
-
-    isolation: isolate;
+        0 14px 40px rgba(32, 65, 110, 0.10);
 }
 
 
-/* Ambient glow */
+/* Educational accent */
 
-.sg-card-glow {
+.sg-mini-accent {
     position: absolute;
+    top: 0;
+    left: 0;
 
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    height: 4px;
 
-    top: -140px;
-    right: -100px;
-
-    border-radius: 50%;
-
-    background: rgba(59, 130, 246, 0.25);
-
-    filter: blur(80px);
-
-    pointer-events: none;
-
-    z-index: -1;
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4,
+            #8b5cf6
+        );
 }
 
 
-/* Main content */
+/* Top */
 
-.sg-card-content {
-    position: relative;
-    z-index: 2;
-
-    padding: 38px;
-}
-
-
-/* Top row */
-
-.sg-card-top {
+.sg-mini-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 20px;
-
-    margin-bottom: 28px;
+    margin-bottom: 19px;
 }
 
 
-/* Category */
-
-.sg-label {
-    color: #7dd3fc;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-}
-
-
-/* Status */
-
-.sg-status {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 8px;
-
-    padding: 7px 11px;
-
-    border: 1px solid rgba(74, 222, 128, 0.25);
-    border-radius: 999px;
-
-    background: rgba(34, 197, 94, 0.08);
-
-    color: #86efac;
+.sg-mini-kicker {
+    color: #52709b;
 
     font-size: 10px;
     font-weight: 800;
 
-    letter-spacing: 0.1em;
+    letter-spacing: 0.13em;
 }
 
 
-/* Status indicator */
-
-.sg-status i {
-    display: block;
-
-    width: 7px;
-    height: 7px;
+.sg-mini-dot {
+    width: 8px;
+    height: 8px;
 
     border-radius: 50%;
 
-    background: #4ade80;
+    background: #22c55e;
 
-    box-shadow: 0 0 12px #4ade80;
+    box-shadow:
+        0 0 0 4px #dcfce7;
 }
 
 
-/* Main heading */
+/* Main */
 
-.sg-profession-card h2 {
+.sg-mini-main {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.sg-mini-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    box-shadow:
+        inset 0 0 0 1px #dbeafe;
+}
+
+
+.sg-mini-main h2 {
     margin: 0;
-
-    color: #ffffff;
 
     font-family:
         Inter,
         system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
         sans-serif;
 
-    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-size: 24px;
 
-    line-height: 0.98;
+    line-height: 1.1;
 
-    letter-spacing: -0.055em;
+    letter-spacing: -0.035em;
 
     font-weight: 850;
+
+    color: #101b2d;
 }
 
 
-/* Description */
+.sg-mini-main p {
+    margin: 7px 0 0;
 
-.sg-description {
-    max-width: 620px;
+    color: #68778d;
 
-    margin: 20px 0 32px;
+    font-size: 13px;
 
-    color: #b9c5d8;
-
-    font-size: 16px;
-
-    line-height: 1.7;
+    line-height: 1.5;
 }
 
 
-.sg-description strong {
-    color: #ffffff;
+.sg-mini-main strong {
+    color: #2563eb;
 }
 
 
-/* Information grid */
+/* Subjects */
 
-.sg-details {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 12px;
-
-    margin-bottom: 18px;
-}
-
-
-/* Information boxes */
-
-.sg-detail {
-    padding: 18px;
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.08);
-
-    border-radius: 17px;
-
-    background:
-        rgba(255, 255, 255, 0.045);
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
-}
-
-
-.sg-detail:hover {
-    transform: translateY(-3px);
-
-    background:
-        rgba(255, 255, 255, 0.07);
-
-    border-color:
-        rgba(96, 165, 250, 0.25);
-}
-
-
-/* Information value */
-
-.sg-detail strong {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #ffffff;
-
-    font-size: 20px;
-
-    font-weight: 800;
-}
-
-
-/* Information label */
-
-.sg-detail span {
-    color: #8290a7;
-
-    font-size: 12px;
-}
-
-
-/* Guidance areas */
-
-.sg-areas {
+.sg-mini-tags {
     display: flex;
-
     flex-wrap: wrap;
 
-    gap: 9px;
+    gap: 7px;
 
-    margin-bottom: 32px;
+    margin: 20px 0 16px;
 }
 
 
-.sg-areas span {
-    padding: 8px 13px;
+.sg-mini-tags span {
+    padding: 6px 10px;
 
-    border:
-        1px solid
-        rgba(96, 165, 250, 0.20);
+    border-radius: 8px;
 
-    border-radius: 999px;
+    background: #f0f6ff;
 
-    background:
-        rgba(37, 99, 235, 0.10);
+    color: #315d91;
 
-    color: #bfdbfe;
-
-    font-size: 12px;
-
+    font-size: 11px;
     font-weight: 700;
 }
 
 
-/* Footer */
+/* Session information */
 
-.sg-card-footer {
+.sg-mini-info {
     display: flex;
-
     align-items: center;
-    justify-content: space-between;
 
-    gap: 20px;
+    gap: 9px;
 
-    padding-top: 22px;
+    padding: 12px 14px;
 
-    border-top:
-        1px solid
-        rgba(255, 255, 255, 0.08);
-}
+    border-radius: 12px;
 
+    background: #f7f9fc;
 
-/* Independent service */
-
-.sg-independent {
-    color: #718096;
+    color: #66758a;
 
     font-size: 12px;
 }
 
 
-/* Explore button */
+.sg-mini-info b {
+    color: #172338;
 
-.sg-explore {
-    display: inline-flex;
+    font-size: 13px;
+}
 
+
+/* Button */
+
+.sg-mini-button {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    gap: 9px;
+    width: 100%;
 
-    padding: 12px 18px;
+    margin-top: 14px;
+    padding: 12px 15px;
 
     border-radius: 12px;
 
-    background: #ffffff;
+    background: #172b4d;
 
-    color: #0f172a;
+    color: #ffffff;
 
     text-decoration: none;
 
-    font-size: 13px;
-
+    font-size: 12px;
     font-weight: 800;
 
     transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
 }
 
 
-.sg-explore:hover {
+.sg-mini-button span {
+    font-size: 17px;
+}
+
+
+.sg-mini-button:hover {
     transform: translateY(-2px);
 
-    background: #dbeafe;
+    background: #2563eb;
 
     box-shadow:
-        0 10px 30px
-        rgba(59, 130, 246, 0.20);
+        0 8px 20px rgba(37, 99, 235, 0.22);
 }
 
 
-.sg-explore span {
-    font-size: 17px;
+/* Mobile */
 
-    line-height: 1;
-}
+@media (max-width: 600px) {
 
+    .sg-mini-card {
+        max-width: none;
 
-/* =========================================================
-   MOBILE
-========================================================= */
+        margin: 22px 10px;
 
-@media (max-width: 650px) {
+        padding: 21px;
 
-    .sg-profession-card {
-        margin: 25px 12px;
-
-        border-radius: 22px;
+        border-radius: 19px;
     }
 
 
-    .sg-card-content {
-        padding: 25px 20px;
+    .sg-mini-main h2 {
+        font-size: 21px;
     }
 
 
-    .sg-card-top {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 12px;
+    .sg-mini-main p {
+        font-size: 12px;
     }
 
 
-    .sg-profession-card h2 {
-        font-size: 2.35rem;
-    }
+    .sg-mini-icon {
+        flex-basis: 42px;
 
-
-    .sg-description {
-        font-size: 14px;
-
-        line-height: 1.65;
-    }
-
-
-    .sg-details {
-        grid-template-columns: 1fr;
-    }
-
-
-    .sg-card-footer {
-        align-items: flex-start;
-
-        flex-direction: column;
-    }
-
-
-    .sg-explore {
-        width: 100%;
+        width: 42px;
+        height: 42px;
     }
 
 }
 
-
-/* =========================================================
-   END — STUDENTS' GUIDANCE PROFESSIONAL CARD
-========================================================= */
+/* =====================================================
+   END — STUDENTS' GUIDANCE CARD
+===================================================== */
 
 </style>
 
-<!-- END: Students' Guidance Professional Card -->
+<!-- END: Students' Guidance Card -->
     
     <section class="section container" id="about">
       <div class="section-head reveal">
