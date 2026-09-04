@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Rohit N — Professional Portfolio">
+  <meta name="theme-color" content="#05070d">
+
+  <title>ROHIT7N — Professional Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #05070d;
+      --text: #f5f7fb;
+      --muted: #8d96a8;
+      --line: rgba(255,255,255,0.09);
+      --accent: #6ee7ff;
+      --accent-2: #8b7cff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(77, 120, 255, 0.12), transparent 35%),
+        radial-gradient(circle at 80% 10%, rgba(110, 231, 255, 0.06), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Ambient grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.28;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+    }
+
+    .container {
+      width: min(92%, 760px);
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.025);
+      color: #b9c2d3;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      margin-bottom: 32px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.45;
+        transform: scale(0.7);
+      }
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 9vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+      font-weight: 750;
+      margin-bottom: 24px;
+      background: linear-gradient(
+        110deg,
+        #ffffff 20%,
+        #dce8ff 50%,
+        #77e9ff 80%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      max-width: 570px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.7;
+    }
+
+    .card {
+      margin: 42px auto 0;
+      max-width: 620px;
+      padding: 1px;
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(110,231,255,0.35),
+          rgba(255,255,255,0.04),
+          rgba(139,124,255,0.3)
+        );
+    }
+
+    .card-inner {
+      border-radius: 23px;
+      padding: 30px;
+      background: rgba(7, 10, 18, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .card-title {
+      font-size: 14px;
+      color: #cbd4e5;
+      letter-spacing: 0.04em;
+      margin-bottom: 22px;
+    }
+
+    .url {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: #78869e;
+      margin-bottom: 26px;
+      word-break: break-all;
+    }
+
+    .visit-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 230px;
+      padding: 15px 24px;
+      border: 1px solid rgba(110,231,255,0.35);
+      border-radius: 14px;
+      background: linear-gradient(
+        135deg,
+        rgba(110,231,255,0.14),
+        rgba(139,124,255,0.14)
+      );
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 650;
+      letter-spacing: 0.03em;
+      overflow: hidden;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .visit-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 80%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.18),
+        transparent
+      );
+      transform: skewX(-20deg);
+      transition: left 0.6s ease;
+    }
+
+    .visit-btn:hover {
+      transform: translateY(-3px);
+      border-color: rgba(110,231,255,0.75);
+      box-shadow:
+        0 12px 40px rgba(77,160,255,0.15),
+        inset 0 0 20px rgba(110,231,255,0.05);
+    }
+
+    .visit-btn:hover::before {
+      left: 140%;
+    }
+
+    .arrow {
+      font-size: 18px;
+      transition: transform 0.25s ease;
+    }
+
+    .visit-btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    footer {
+      margin-top: 38px;
+      color: #596376;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Decorative corners */
+    .corner {
+      position: fixed;
+      width: 90px;
+      height: 90px;
+      border-color: rgba(110,231,255,0.16);
+      pointer-events: none;
+    }
+
+    .corner.tl {
+      top: 24px;
+      left: 24px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+    }
+
+    .corner.tr {
+      top: 24px;
+      right: 24px;
+      border-top: 1px solid;
+      border-right: 1px solid;
+    }
+
+    .corner.bl {
+      bottom: 24px;
+      left: 24px;
+      border-bottom: 1px solid;
+      border-left: 1px solid;
+    }
+
+    .corner.br {
+      bottom: 24px;
+      right: 24px;
+      border-bottom: 1px solid;
+      border-right: 1px solid;
+    }
+
+    @media (max-width: 600px) {
+      .card-inner {
+        padding: 24px 18px;
+      }
+
+      .corner {
+        width: 55px;
+        height: 55px;
+      }
+
+      .corner.tl,
+      .corner.tr {
+        top: 14px;
+      }
+
+      .corner.bl,
+      .corner.br {
+        bottom: 14px;
+      }
+
+      .corner.tl,
+      .corner.bl {
+        left: 14px;
+      }
+
+      .corner.tr,
+      .corner.br {
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <main class="container">
+
+    <div class="status">
+      <span class="dot"></span>
+      New Portfolio
+    </div>
+
+    <div class="eyebrow">
+      Professional Portfolio
+    </div>
+
+    <h1>Rohit N</h1>
+
+    <p class="subtitle">
+      Welcome to my new professional portfolio —
+      a central space for my work, projects, technical journey,
+      research, and professional initiatives.
+    </p>
+
+    <section class="card">
+
+      <div class="card-inner">
+
+        <div class="card-title">
+          Explore the new website
+        </div>
+
+        <div class="url">
+          rohitnavgale.rohit7n.workers.dev
+        </div>
+
+        <a
+          class="visit-btn"
+          href="https://rohitnavgale.rohit7n.workers.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Professional Portfolio
+          <span class="arrow">→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <footer>
+      Rohit · Professional & Portfolio Website
+    </footer>
+
+  </main>
+
+  <script>
+    // Subtle pointer interaction
+    const card = document.querySelector(".card");
+
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+      card.style.transform =
+        `perspective(900px) rotateY(${x * 1.2}deg) rotateX(${y * -1.2}deg)`;
+    });
+
+    document.addEventListener("mouseleave", () => {
+      card.style.transform =
+        "perspective(900px) rotateY(0deg) rotateX(0deg)";
+    });
+  </script>
+
+</body>
+</html>
